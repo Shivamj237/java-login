@@ -18,9 +18,12 @@
   <div sec:authorize="isAuthenticated()">
     <p>Logged as: <span sec:authentication="name"></span></p>
     <p>Has role: <span sec:authentication="authorities"></span></p>
-    <p sec:authorize="hasAuthority('USER')"><a th:href="@{|/dashboard|}" th:text="'User Dashboard'"></a></p>
+    <!-- <p sec:authorize="hasAuthority('USER')"><a th:href="@{|/dashboard|}" th:text="'User Dashboard'"></a></p> -->
     <p sec:authorize="hasAuthority('ADMIN')"><a th:href="@{|/admin/dashboard|}" th:text="'Admin Dashboard'"></a></p>
     <a th:href="@{/logout}">Log out</a>
+    <!-- Homepage Button -->
+    <p><a th:href="@{|http://localhost:8082|}" th:text="'Homepage'"></a></p>
+
   </div>
 
 </body>
