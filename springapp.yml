@@ -35,3 +35,12 @@ services:
     depends_on:
       - postgres
 
+  homepage:
+    image: jamgadeshivam/homepage:latest 
+    container_name: front_homepage
+    ports:
+      - "8082:80"
+    restart: always 
+    networks:
+      - mynetwork
+
